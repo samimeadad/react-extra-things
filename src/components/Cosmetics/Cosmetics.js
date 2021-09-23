@@ -13,13 +13,15 @@ const Cosmetics = () => {
     return (
         <div>
             <h2>Shop My Cosmetics!!!</h2>
-            {
-                cosmetics.map( cosmetic => <Cosmetic
-                    key={ cosmetic._id }
-                    cosmetic={ cosmetic }>
-                </Cosmetic> )
-            }
-        </div>
+            <div style={ { display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', margin: '50px' } }>
+                {
+                    cosmetics.map( cosmetic => <Cosmetic
+                        key={ cosmetic._id }
+                        cosmetic={ cosmetic }>
+                    </Cosmetic> )
+                }
+            </div>
+        </div >
     );
 };
 
